@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    background: transparent;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button > img {
+    width: 20px;
+    height: 20px;
+}
+
+button > span {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button > img + span {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+
+}
+
+.button__big {
+    border-radius: 7px;
+    padding: 18px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.button__ordinary {
+    color: black;
+    background-color: transparent;
+}
+
+.button__accent {
+    color: white;
+    background-color: red;
+
+    & > img {
+        color: white;
+    }
+}
+
+.button__align-left-border {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

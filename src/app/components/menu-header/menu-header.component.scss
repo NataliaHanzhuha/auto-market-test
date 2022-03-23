@@ -1,0 +1,54 @@
+:host {
+    display: block;
+    margin: 30px 20px;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-wrapper {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .region-flag  img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-size: 18px;
+}
+
+.menu-item a {
+    color: lightgray;
+    padding: 10px 0;
+}
+
+.menu-item__selected a {
+    color: black;
+    font-weight: 600;
+    border-bottom: 3px solid red;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.buttons-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
