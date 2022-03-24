@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CarsService } from './services/cars.service';
 
 @Component({
@@ -8,9 +8,15 @@ import { CarsService } from './services/cars.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
-  constructor(private carsService: CarsService) {}
+  carsList: any[] = [];
+  constructor(private carsService: CarsService, private cd: ChangeDetectorRef) {}
 
   ngOnInit(): void {
-    this.carsService.getCars().subscribe(console.log)
+    this.carsService.getCars().subscribe((res: any[]) => {
+      this.carsList = res;
+      this.cd.detectChanges();
+    });
   }
+
+
 }
